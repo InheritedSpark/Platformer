@@ -43,7 +43,7 @@ public class Player extends Object  {
 		super(game, x, y, width, height, id);
 		this.handler = handler;
 		this.game = game;
-		//set velocity//
+		//set velocity// 445
 		gravity = 0.75;
 		friction = 0.02;
 		falling = true;
