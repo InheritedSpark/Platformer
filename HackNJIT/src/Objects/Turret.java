@@ -52,10 +52,14 @@ public class Turret extends Gun {
 		bulletSpeed = 25;
 		range = 10000;
 		fire = false;
+		health = 500;
 	}
 
 	@Override
 	public void tick() {
+		if(health < 0){
+			game.handler.removeObject(this);
+		}
 		if(objects == null){
 			objects = game.handler.getGameObjects();
 		}
@@ -103,7 +107,11 @@ public class Turret extends Gun {
 		//g2d.draw(range());
 		//g2d.translate(x, y);
 		if(reload){
+			g2d.setStroke(new BasicStroke(2));
 			g2d.setColor(Color.gray);
+		}
+		else{
+			g2d.setStroke(new BasicStroke(10));
 		}
 		g2d.draw(getBounds());
 		//g2d.drawImage(Assets.turret, (int)x, (int)y, width, height, null);

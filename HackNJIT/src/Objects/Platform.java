@@ -5,7 +5,6 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
-
 import Main.ID;
 import Main.Main;
 
@@ -35,7 +34,7 @@ public class Platform extends Object{
 	public void render(Graphics g) {
 		Graphics2D g2d = (Graphics2D)g;
 		g2d.setColor(Color.black);
-        g2d.setStroke(new BasicStroke(2));
+		g2d.setStroke(new BasicStroke(2));
         if(isfragile){
         	g2d.setColor(Color.gray);
         }

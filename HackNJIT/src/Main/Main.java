@@ -32,7 +32,6 @@ public class Main implements Runnable{
 		this.Height=Height;
 		display = new Display(gameName,Width,Height);
 		init();
-		start();
 	}
 	
 	public void init(){
@@ -100,7 +99,7 @@ public class Main implements Runnable{
 		
 	}
 
-	double alpha = 20;
+	double alpha = 10;
 	boolean dec = false;
 	
 	private void render() {
@@ -114,8 +113,8 @@ public class Main implements Runnable{
 		
 		//////////////////////////////////
 //		g2d.setColor(Color.white);
-//		g2d.fillRect(0, 0, Width, Height);
-		g2d.drawImage(asset.background, 0, 0, Width, Height, null);
+		g2d.fillRect(0, 0, Width, Height);
+//		g2d.drawImage(asset.background, 0, 0, Width, Height, null);
 		//BufferedImage player = asset.playerSpriteSheet;
 		//g2d.drawImage(player, 0, 0, null);
 		
@@ -141,6 +140,7 @@ public class Main implements Runnable{
 				alpha = 0;
 				dec = false;
 			}
+			
 		}
 		
 		

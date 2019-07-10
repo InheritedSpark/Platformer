@@ -12,5 +12,6 @@ public enum ID {
 	Grenade(),
 	Turret(),
 	Portal(),
-	Laser();
+	Laser(),
+	Effect();
 }
